@@ -1,0 +1,29 @@
+{
+  "name": "emojical",
+  "description": "EmojiCal allows a user to input meal information for one day, and sort by calorie counts. User can edit food items after input.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Alexander Jacks"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Angular2",
+    "calories",
+    "emoji",
+    "emojis",
+    "epicodus"
+  ],
+  "homepage": "https://github.com/Adjectival/emojical",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.15.1"
+  }
+}
