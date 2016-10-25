@@ -1,36 +1,21 @@
 import { Component } from '@angular/core';
 import { Food } from './food.model';
 
-
 @Component({
   selector: 'my-app',
   template: `
   <div class="container">
     <h1>EmojiCal<i class="em em-clipboard"></i><i class="em em-cookie"></i><i class="em em-ok_hand"></i></h1>
     <div>
+      <new-food>
+      </new-food>
       <food-list
         [childFoodList]="masterFoodList" (editSender)="editFood($event)">
       </food-list>
     </div>
     <div>
-      <div *ngIf="selectedFood" class="well" width="70%">
-        <h3>You sure you aren't fibbing?</h3>
-        <div>
-          <label>Food Name:</label>
-          <input [(ngModel)]="selectedFood.name">
-        </div>
-        <div>
-          <label>Food Description:</label>
-          <input [(ngModel)]="selectedFood.description">
-        </div>
-        <div>
-          <label>Food Calories:</label>
-          <input [(ngModel)]="selectedFood.calories">
-        </div>
-        <div>
-          <button (click)="endEditFood(selectedFood)" class ="btn btn-lg btn-primary">OK, Save Edit</button>
-        </div>
-      </div>
+      <edit-food [childSelectedFood]="selectedFood" (sendDoneEditting)="endEditFood()">
+      </edit-food>
     </div>
   </div>
   `
