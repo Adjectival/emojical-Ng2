@@ -6,15 +6,15 @@ import { Food } from './food.model';
   template: `
   <div class="container">
     <h1>EmojiCal<i class="em em-clipboard"></i><i class="em em-cookie"></i><i class="em em-ok_hand"></i></h1>
-    <div>
+    <div class="NEWdiv">
       <new-food (newFoodSender)="addFood($event)"></new-food>
     </div>
-    <div>
+    <div class="LISTdiv">
       <food-list
         [childFoodList]="masterFoodList" (editSender)="editFood($event)">
       </food-list>
     </div>
-    <div>
+    <div class="EDITdiv">
       <edit-food [childSelectedFood]="selectedFood" (sendDoneEditting)="endEditFood()">
       </edit-food>
     </div>
