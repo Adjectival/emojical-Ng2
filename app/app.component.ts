@@ -7,8 +7,9 @@ import { Food } from './food.model';
   <div class="container">
     <h1>EmojiCal<i class="em em-clipboard"></i><i class="em em-cookie"></i><i class="em em-ok_hand"></i></h1>
     <div>
-      <new-food (newFoodSender)="addFood($event)">
-      </new-food>
+      <new-food (newFoodSender)="addFood($event)"></new-food>
+    </div>
+    <div>
       <food-list
         [childFoodList]="masterFoodList" (editSender)="editFood($event)">
       </food-list>
