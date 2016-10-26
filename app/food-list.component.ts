@@ -5,9 +5,14 @@ import { Food } from './food.model';
   selector: 'food-list',
   template: `
   <div>
-    <select (change)="onChange($event.target.value)">
-      <option value="no" selected="selected">Show All</option>
-      <option value="yes">Show Piggy Foods</option>
+    <select class="form-control selcls" (change)="onChange($event.target.value)">
+      <optgroup label="Unsorted">
+        <option value="all" selected="selected">Show All Foods</option>
+      </optgroup>
+      <optgroup label="Sort by Calories">
+        <option value="no">Show Healthy Foods</option>
+        <option value="yes">Show Piggy Foods</option>
+      </optgroup>
     </select>
   </div>
   <div *ngFor="let selectedFood of childFoodList | piggy:caloriesSort">
@@ -26,7 +31,7 @@ export class FoodListComponent {
   editFood(foodToEdit: Food) {
     this.editSender.emit(foodToEdit);
   }
-  public caloriesSort: string = "no"
+  public caloriesSort: string = "all"
   onChange(selectMenuChoice) {
     this.caloriesSort = selectMenuChoice;
     console.log(this.caloriesSort);

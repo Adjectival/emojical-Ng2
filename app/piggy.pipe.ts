@@ -16,6 +16,13 @@ export class PiggyPipe implements PipeTransform {
         }
       }
       return pipedOutput;
+    } else if (sortByPiggy === "no") {
+      for (var i=0; i < input.length; i++) {
+        if (input[i].calories < 500) {
+          pipedOutput.push(input[i]);
+        }
+      }
+      return pipedOutput;
     } else {
       return input;
     }

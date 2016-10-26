@@ -7,18 +7,14 @@ import { Food } from './food.model';
   <h3>What did You just Consume??</h3>
   <div>
     <label>Food Name:</label>
-    <input #newFoodName>
-  </div>
-  <div>
+    <input #newFoodName class="form-control">
     <label>Food Description:</label>
-    <input #newFoodDescription>
-  </div>
-  <div>
+    <input #newFoodDescription class="form-control">
     <label>Food Calories:</label>
-    <input #newFoodCalories>
+    <input #newFoodCalories class="form-control">
   </div>
   <div>
-    <button (click)="newFoodSubmit(newFoodName.value, newFoodDescription.value, newFoodCalories.value); newFoodName.value=''; newFoodDescription.value=''; newFoodCalories.value='';">OK, I Ate This</button>
+    <button (click)="newFoodSubmit(newFoodName.value, newFoodDescription.value, newFoodCalories.value); newFoodName.value=''; newFoodDescription.value=''; newFoodCalories.value='';" class="btn btn-block btn-primary">OK, I Ate This</button>
   </div>
   `
 })

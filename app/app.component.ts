@@ -26,7 +26,8 @@ export class AppComponent {
   public masterFoodList: Food []  = [
     new Food("16 oz curry rice", "Japanese comfort food", 740),
     new Food("12 oz vanilla sweet cream nitro cold brew", "actually coffee, not beer", 100),
-    new Food("2pcs grilled fatty tuna nigiri", "tastes like charred", 240)
+    new Food("2pcs grilled fatty tuna nigiri", "tastes like charred", 240),
+    new Food("double double animal style", "not yet in Poetland", 770)
   ];
   selectedFood: Food = null;
   editFood(clickedFood: Food){

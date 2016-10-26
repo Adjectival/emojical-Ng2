@@ -2,25 +2,22 @@ body {
   background-color: orange;
 }
 
-.NEWdiv {
+.NEWdiv, .LISTdiv {
   margin: 5px;
-  border: 1px solid blue;
-}
-.LISTdiv {
-  margin: 5px;
+  padding: 6px;
   border: 1px solid blue;
 }
 .EDITdiv {
   margin: 5px;
-  border: 1px solid blue;
+  padding: 6px;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: monospace;;
+h1, h2, h3, h4, h5, label, input {
+  font-family: monospace;
   color: blue;
 }
 
-h2 {
+h2, input  {
   color: black;
 }
 
