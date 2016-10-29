@@ -10,8 +10,8 @@ import { Food } from './food.model';
         <option value="all" selected="selected">Show All Foods</option>
       </optgroup>
       <optgroup label="Sort by Calories">
-        <option value="no">Show Healthy Foods</option>
-        <option value="yes">Show Piggy Foods</option>
+        <option value="no">Show Healthy Foods (under 500 cal)</option>
+        <option value="yes">Show Piggy Foods (500+ calories)</option>
       </optgroup>
     </select>
   </div>
@@ -19,7 +19,7 @@ import { Food } from './food.model';
     <div>
       <h2><i class="em em-{{ selectedFood.emoji }}"></i> ~ {{ selectedFood.name }}</h2>
       <h4>{{ selectedFood.description }}</h4>
-      <h4 class="calNumber">{{ selectedFood.calories }}</h4>
+      <h4 class="calNumber">{{ selectedFood.calories }} kcalories</h4>
       <button (click)="editFood(selectedFood)" class="btn btn-lg btn-info">Edit this Food</button>
     </div>
   </div>

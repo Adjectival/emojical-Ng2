@@ -1,11 +1,11 @@
 body {
-  background-color: orange;
+  background-color: peachpuff;
 }
 
 .NEWdiv, .LISTdiv {
   margin: 5px;
   padding: 6px;
-  border: 1px solid blue;
+  border: 1px solid navy;
 }
 .EDITdiv {
   margin: 5px;
@@ -13,8 +13,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, label, input {
-  font-family: monospace;
-  color: blue;
+  font-family: cursive, fantasy;
+  color: navy;
 }
 
 h2, input  {
