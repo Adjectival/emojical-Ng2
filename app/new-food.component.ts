@@ -12,9 +12,11 @@ import { Food } from './food.model';
     <input #newFoodDescription class="form-control">
     <label>Food Calories:</label>
     <input #newFoodCalories class="form-control">
+    <label>Food Emoji:</label>
+    <input #newFoodEmoji class="form-control">
   </div>
   <div>
-    <button (click)="newFoodSubmit(newFoodName.value, newFoodDescription.value, newFoodCalories.value); newFoodName.value=''; newFoodDescription.value=''; newFoodCalories.value='';" class="btn btn-block btn-primary">OK, I Ate This</button>
+    <button (click)="newFoodSubmit(newFoodName.value, newFoodDescription.value, newFoodCalories.value); newFoodName.value=''; newFoodDescription.value=''; newFoodCalories.value=''; newFoodEmoji.value='';" class="btn btn-block btn-primary">OK, I Ate This</button>
   </div>
   `
 })
@@ -22,7 +24,7 @@ import { Food } from './food.model';
 export class NewFoodComponent {
   @Output() newFoodSender = new EventEmitter();
   newFoodSubmit(name: string, description: string, calories: number) {
-    var newFoodSubmit: Food = new Food(name, description, calories);
+    var newFoodSubmit: Food = new Food(name, description, calories, emoji);
     this.newFoodSender.emit(newFoodSubmit);
   }
 }

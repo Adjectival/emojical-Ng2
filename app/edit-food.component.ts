@@ -19,6 +19,10 @@ import { Food } from './food.model';
       <input [(ngModel)]="childSelectedFood.calories" class="form-control">
     </div>
     <div>
+      <label>Food Emoji:</label>
+      <input [(ngModel)]="childSelectedFood.emoji" class="form-control">
+    </div>
+    <div>
       <button (click)="doneEditting(childSelectedFood)" class ="btn btn-lg btn-primary">OK, Save Edit</button>
     </div>
   </div>

@@ -16,10 +16,10 @@ import { Food } from './food.model';
     </select>
   </div>
   <div *ngFor="let selectedFood of childFoodList | piggy:caloriesSort">
-    <h2>{{ selectedFood.name }}</h2>
-    <h4>{{ selectedFood.description }}</h4>
-    <h4 class="calNumber">{{ selectedFood.calories }}</h4>
     <div>
+      <h2><i class="em em-{{ selectedFood.emoji }}"></i> ~ {{ selectedFood.name }}</h2>
+      <h4>{{ selectedFood.description }}</h4>
+      <h4 class="calNumber">{{ selectedFood.calories }}</h4>
       <button (click)="editFood(selectedFood)" class="btn btn-lg btn-info">Edit this Food</button>
     </div>
   </div>
