@@ -11,9 +11,7 @@ EmojiCal allows a user to input meal information for one day, and sort by calori
 
 2. Open terminal in your project directory
 ```
-$ npm install
-$ bower install
-$ gulp serve
+$ npm install && bower install && gulp serve
 ```
 
 ## User Stories
