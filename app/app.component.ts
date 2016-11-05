@@ -5,7 +5,7 @@ import { Food } from './food.model';
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1><i class="em em-clipboard"></i><i class="em em-cookie"></i><i class="em em-ok_hand"></i>  ✦ EmojiCal ✦</h1>
+    <h1><i class="em em-clipboard"></i><i class="em em-cookie"></i><i class="em em-ok_hand"></i>  ✦ EmojiCal</h1>
     <div class="NEWdiv">
       <new-food (newFoodSender)="addFood($event)"></new-food>
     </div>
