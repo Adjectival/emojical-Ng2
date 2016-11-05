@@ -72,6 +72,13 @@ gulp.task('cssBower', ['cssBowerClean'], function() {
 gulp.task('bower', ['jsBower', 'cssBower']);
 
 ////////////////////// SASS //////////////////////
+gulp.task('cssBuild', function() {
+  return gulp.src(['scss/*.scss'])
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./build/css'));
+});
 
 gulp.task('sassBuild', function() {
   return gulp.src(['resources/styles/*'])
