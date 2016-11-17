@@ -1,7 +1,6 @@
 bower_components/
 node_modules/
 typings/
-build/
 app/*.js.map
 app/*.js
 .DS_Store
