@@ -1,8 +1,0 @@
-bower_components/
-build/
-node_modules/
-typings/
-app/*.js.map
-app/*.js
-.DS_Store
-npm-debug.log
