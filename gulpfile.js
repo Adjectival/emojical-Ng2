@@ -1,5 +1,6 @@
 ////////////////////// DEPENDENCIES AND VARIABLES //////////////////////
 var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
 
 // used for concatenating/minifying bower files and other js/css
 var concat = require('gulp-concat');
@@ -114,7 +115,11 @@ gulp.task('tsBuild', ['ts'], function(){
 ////////////////////// GLOBAL BUILD TASK //////////////////////
 // global build task with individual clean tasks as dependencies.
 gulp.task('build', ['ts'], function(){
-  // we can use the buildProduction environment variable here later.
   gulp.start('bower');
   gulp.start('sassBuild');
+});
+// build prod environment for gh-pages
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
