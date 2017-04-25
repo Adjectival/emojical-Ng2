@@ -3,6 +3,8 @@
 _Epicodus, October 2016_
 ### By _Alexander Jacks_
 
+![screenshot](resources/images/screenshot_Apr2017.png)
+
 ### Description
 EmojiCal allows a user to input meal information for one day, and sort by calorie counts. User can edit food items after input.
 
