@@ -115,6 +115,8 @@ gulp.task('tsBuild', ['ts'], function(){
 // global build task with individual clean tasks as dependencies.
 gulp.task('build', ['ts'], function(){
   // we can use the buildProduction environment variable here later.
+
   gulp.start('bower');
+  gulp.start('htmlBuild');
   gulp.start('sassBuild');
 });
